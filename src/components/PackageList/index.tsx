@@ -9,14 +9,15 @@ type TPackageListProps = {
 };
 
 export const PackageList = ({ list }: TPackageListProps) => {
-  const sortedDependencyList = Object.keys(list).sort();
   return (
     <ul>
-      {sortedDependencyList.map(name => (
-        <li key={name}>
-          <PackageItem list={list} package={name} />
-        </li>
-      ))}
+      {Object.keys(list)
+        .sort()
+        .map(name => (
+          <li key={name}>
+            <PackageItem list={list} package={name} />
+          </li>
+        ))}
     </ul>
   );
 };

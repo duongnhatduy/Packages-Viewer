@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correct dependency 1`] = `
+<div>
+  <button>
+    acpid
+  </button>
+  <div>
+    Advanced Configuration and Power Interface event daemon
+ Modern computers support the Advanced Configuration and Power Interface (ACPI)
+ to allow intelligent power management on your system and to query battery and
+ configuration status.
+ .
+ ACPID is a completely flexible, totally extensible daemon for delivering
+ ACPI events. It listens on netlink interface (or on the deprecated file
+ /proc/acpi/event), and when an event occurs, executes programs to handle the
+ event. The programs it executes are configured through a set of configuration
+ files, which can be dropped into place by packages or by the admin.
+    <section>
+      <h2>
+        Dependencies
+      </h2>
+      <ul>
+        <li>
+          <button>
+            libc6
+          </button>
+          <div>
+            Embedded GNU C Library
+            <section>
+              <h2>
+                Dependencies
+              </h2>
+              <ul>
+                <li>
+                  <div>
+                    libc-bin
+                     not installed
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    libgcc1
+                     not installed
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    tzdata
+                     not installed
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Reverse dependencies
+              </h2>
+              <ul>
+                <li>
+                  <button>
+                    acpid
+                  </button>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </li>
+        <li>
+          <div>
+            lsb-base
+             not installed
+          </div>
+        </li>
+        <li>
+          <div>
+            module-init-tools
+             not installed
+          </div>
+        </li>
+        <li>
+          <div>
+            upstart-job
+             not installed
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>
+        Reverse dependencies
+      </h2>
+      <ul />
+    </section>
+  </div>
+</div>
+`;
+
+exports[`renders correct expanded dependency 1`] = `
+<div>
+  <button>
+    acpid
+  </button>
+  <div>
+    Advanced Configuration and Power Interface event daemon
+ Modern computers support the Advanced Configuration and Power Interface (ACPI)
+ to allow intelligent power management on your system and to query battery and
+ configuration status.
+ .
+ ACPID is a completely flexible, totally extensible daemon for delivering
+ ACPI events. It listens on netlink interface (or on the deprecated file
+ /proc/acpi/event), and when an event occurs, executes programs to handle the
+ event. The programs it executes are configured through a set of configuration
+ files, which can be dropped into place by packages or by the admin.
+    <section>
+      <h2>
+        Dependencies
+      </h2>
+      <ul>
+        <li>
+          <button>
+            libc6
+          </button>
+          <div>
+            Embedded GNU C Library
+            <section>
+              <h2>
+                Dependencies
+              </h2>
+              <ul>
+                <li>
+                  <div>
+                    libc-bin
+                     not installed
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    libgcc1
+                     not installed
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    tzdata
+                     not installed
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Reverse dependencies
+              </h2>
+              <ul>
+                <li>
+                  <button>
+                    acpid
+                  </button>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </li>
+        <li>
+          <div>
+            lsb-base
+             not installed
+          </div>
+        </li>
+        <li>
+          <div>
+            module-init-tools
+             not installed
+          </div>
+        </li>
+        <li>
+          <div>
+            upstart-job
+             not installed
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>
+        Reverse dependencies
+      </h2>
+      <ul />
+    </section>
+  </div>
+</div>
+`;
+
+exports[`renders with reverse dependencies 1`] = `
+<div>
+  <button>
+    libc6
+  </button>
+  <div>
+    Embedded GNU C Library
+    <section>
+      <h2>
+        Dependencies
+      </h2>
+      <ul>
+        <li>
+          <div>
+            libc-bin
+             not installed
+          </div>
+        </li>
+        <li>
+          <div>
+            libgcc1
+             not installed
+          </div>
+        </li>
+        <li>
+          <div>
+            tzdata
+             not installed
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>
+        Reverse dependencies
+      </h2>
+      <ul>
+        <li>
+          <button>
+            acpid
+          </button>
+          <div>
+            Advanced Configuration and Power Interface event daemon
+ Modern computers support the Advanced Configuration and Power Interface (ACPI)
+ to allow intelligent power management on your system and to query battery and
+ configuration status.
+ .
+ ACPID is a completely flexible, totally extensible daemon for delivering
+ ACPI events. It listens on netlink interface (or on the deprecated file
+ /proc/acpi/event), and when an event occurs, executes programs to handle the
+ event. The programs it executes are configured through a set of configuration
+ files, which can be dropped into place by packages or by the admin.
+            <section>
+              <h2>
+                Dependencies
+              </h2>
+              <ul>
+                <li>
+                  <button>
+                    libc6
+                  </button>
+                </li>
+                <li>
+                  <div>
+                    lsb-base
+                     not installed
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    module-init-tools
+                     not installed
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    upstart-job
+                     not installed
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Reverse dependencies
+              </h2>
+              <ul />
+            </section>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
+`;
