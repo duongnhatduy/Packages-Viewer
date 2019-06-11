@@ -19,7 +19,6 @@ export default function PackageItem({
   if (!currentPackage) {
     return <div>{name} not installed</div>;
   }
-
   return (
     <>
       <button onClick={() => setExpanded(!isExpanded)}>{name}</button>
@@ -28,14 +27,30 @@ export default function PackageItem({
           {description}
           {!!depends && (
             <>
-              <h2>Dependencies</h2>
-              <ul>
-                {getDependencies(depends).map(dependency => (
-                  <li key={dependency}>
-                    <PackageItem package={dependency} list={list} />
-                  </li>
-                ))}
-              </ul>
+              <section>
+                <h2>Dependencies</h2>
+                <ul>
+                  {getDependencies(depends)
+                    .sort()
+                    .map(dependency => (
+                      <li key={dependency}>
+                        <PackageItem package={dependency} list={list} />
+                      </li>
+                    ))}
+                </ul>
+              </section>
+              <section>
+                <h2>Reverse dependencies</h2>
+                <ul>
+                  {getReverseDependencies(name, list)
+                    .sort()
+                    .map(dependency => (
+                      <li key={dependency}>
+                        <PackageItem package={dependency} list={list} />
+                      </li>
+                    ))}
+                </ul>
+              </section>
             </>
           )}
         </div>
@@ -52,4 +67,15 @@ export default function PackageItem({
  */
 function getDependencies(depends: string): string[] {
   return depends.split(", ").map(dependency => dependency.split(" ")[0]);
+}
+
+function getReverseDependencies(
+  packageName: string,
+  list: { [name: string]: TPackage }
+): string[] {
+  return Object.keys(list).filter(name => {
+    const { depends = "" } = list[name];
+    const dependencies = getDependencies(depends);
+    return dependencies.indexOf(packageName) > -1;
+  });
 }
